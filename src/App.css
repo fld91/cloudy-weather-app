@@ -1,6 +1,19 @@
 .App {
-  text-align: center;
-  background-color: rgb(154, 223, 200);
+  position: relative;
+  background-color: #f4fbfe;
+  width: 1200px ;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+}
+.left{
+  margin: 0;
+  width: 800px;
+
+}
+.right{
+  
+  width:400px;
+  background-color: #12163c;
   
 }
-

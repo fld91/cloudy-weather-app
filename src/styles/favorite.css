@@ -1,0 +1,20 @@
+
+.favPlace{
+    height:100px;
+    width:80px;
+    border:1px solid rgb(21, 28, 81);
+    border-radius: 5px;
+    text-align: center;
+    margin:10px;
+    
+}
+.cityName{
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 300;
+    color: #12163c;
+}
+.img1{
+    height: 100px;
+    width:80px;
+}
