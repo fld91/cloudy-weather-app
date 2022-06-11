@@ -10,6 +10,7 @@ function Daily(props) {
   return (
     <div className='dailyContainer'>
         <table>
+          <thead>
         <tr>
             <th>Day</th>
             <th>Precipitation</th>
@@ -17,6 +18,8 @@ function Daily(props) {
             <th>r</th>
             <th>t</th>
         </tr>
+        </thead>
+        <tbody>
         <tr>
             <td></td>
             <td></td>
@@ -30,7 +33,8 @@ function Daily(props) {
             <td>3</td>
             <td>4</td>
             <td>4</td>
-        </tr>   
+        </tr>
+        </tbody>   
             
         </table>
         

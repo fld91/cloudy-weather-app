@@ -1,0 +1,82 @@
+.topbar{
+    display: flex;
+    color: aliceblue;
+    font-family: 'Roboto';
+    font-weight: 500;
+    justify-content: space-between;
+}
+
+.notify{
+    padding-left: 10px;
+    display: flex;
+}
+.notify-box{
+    margin-top: 5px;
+    width:20px;
+    height:20px;
+    border-radius: 5px;
+    background-color: rgb(140, 58, 58);
+    padding:2px;
+
+display:flex;
+justify-content: center;    
+}
+.middle{
+    
+    align-items: center;
+    color:white;
+    font-family: 'Roboto';
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+.toptile{
+    display: flex;
+}
+#weather-img{
+    padding: 5px;
+    margin-top: 30px;
+    width: 30px;
+    height: 30px;
+}
+.today{
+    
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 0%;
+}
+.date{
+    color: rgb(188, 192, 226);
+    font-size: 15px;
+    
+}
+.temp{
+    display: flex;
+    
+     
+}
+.temperature{
+    font-size: 100px;
+    font-weight: 300;
+}
+
+.degcel{
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 100;
+    color: rgb(202, 211, 220);
+}
+.btm{
+   
+    font-family: 'Roboto';
+    font-size: 15px;
+    color: rgb(164, 172, 180);
+    margin-left: 120px;
+    margin-right: 80px;
+}
+#profile{
+    padding:5px;
+    border-radius: 20px;
+}
