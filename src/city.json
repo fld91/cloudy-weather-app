@@ -1,0 +1,38 @@
+[{
+    "id": 1261481,
+    "name": "New Delhi",
+    "state": "",
+    "country": "IN",
+    "coord": {
+        "lon": 77.23114,
+        "lat": 28.61282
+    }
+},{
+    "id": 1275339,
+    "name": "Mumbai",
+    "state": "",
+    "country": "IN",
+    "coord": {
+        "lon": 72.847939,
+        "lat": 19.01441
+    }
+},
+{
+    "id": 1277333,
+    "name": "Bengaluru",
+    "state": "",
+    "country": "IN",
+    "coord": {
+        "lon": 77.603287,
+        "lat": 12.97623
+    }
+},{
+    "id": 1259229,
+    "name": "Pune",
+    "state": "",
+    "country": "IN",
+    "coord": {
+        "lon": 73.855347,
+        "lat": 18.519569
+    }
+}]

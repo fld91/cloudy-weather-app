@@ -1,11 +1,12 @@
 .dataContainer {
     width: 800px;
-    margin: 0 auto;
+    margin: 20px 0px 10px 0px;
 }
 
 .tabs {
     display: flex;
     justify-content: space-between;
+    
 }
 
 .tabs button {
@@ -16,32 +17,22 @@
     padding: 5px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.1);
-    transition: all 0.5s ease-out;
-}
-
-.tabs button:hover {
-    color: white;
-    background-color: rgba(255, 255, 255, 0.15);
-}
-
-.tabs button:disabled {
-    background: linear-gradient(245.39deg, #FC65ED -35.14%, #0500FF 143.06%);
-    color: white;
-}
-
-.title {
-    color: black;
-    font-size: medium;
-    margin-bottom: 20px;
+    transition: all 0.3s ease-out;
+    font-weight: 200;
+    font-family: 'Roboto';
     font-size: 20px;
-    font-weight: 600;
+    
 }
 
-.content {
-    padding: 50px 80px;
-    background-color: white;
-    font-weight: 300;
-    line-height: 30px;
-    font-size: 16px;
-    text-align: justify;
+ 
+.dot{
+    margin: 0;
 }
+.tabs button:disabled {
+    
+    font-weight: 500;
+    color: #58637a;
+}
+
+
+

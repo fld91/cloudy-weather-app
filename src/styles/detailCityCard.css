@@ -1,28 +1,31 @@
+:root{
+    --dim-color:rgb(188, 192, 226)
+}
 .topbar{
     display: flex;
     color: aliceblue;
     font-family: 'Roboto';
     font-weight: 500;
     justify-content: space-between;
+    padding:5px;
+    margin-top: 3vh;
 }
 
 .notify{
-    padding-left: 10px;
+    padding-left: 10px;    
     display: flex;
+    margin: 5px;
 }
-.notify-box{
-    margin-top: 5px;
+.notify-box{    
     width:20px;
     height:20px;
     border-radius: 5px;
     background-color: rgb(140, 58, 58);
-    padding:2px;
-
-display:flex;
-justify-content: center;    
+    display: flex;
+    justify-content: center;    
 }
 .middle{
-    
+    margin-top: 5vh;    
     align-items: center;
     color:white;
     font-family: 'Roboto';
@@ -45,20 +48,22 @@ justify-content: center;
     font-size: 25px;
     font-weight: 500;
     margin-bottom: 0%;
+    padding: 5px;
 }
 .date{
-    color: rgb(188, 192, 226);
+    color: var(--dim-color);
     font-size: 15px;
     
 }
 .temp{
     display: flex;
+   margin-top: 10px;
     
      
 }
 .temperature{
-    font-size: 100px;
-    font-weight: 300;
+    font-size: 120px;
+    font-weight: 200;
 }
 
 .degcel{
@@ -68,15 +73,28 @@ justify-content: center;
     font-weight: 100;
     color: rgb(202, 211, 220);
 }
+.cityname{
+    color:var(--dim-color)
+}
 .btm{
    
     font-family: 'Roboto';
     font-size: 15px;
     color: rgb(164, 172, 180);
-    margin-left: 120px;
-    margin-right: 80px;
+    margin: 20px 80px 0px 100px;
+    
 }
 #profile{
     padding:5px;
     border-radius: 20px;
+}
+.btm-title-text{
+    
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+}
+.bottom{
+    margin-top: 16vh;
+    
 }

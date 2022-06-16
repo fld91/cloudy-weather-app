@@ -1,10 +1,9 @@
 .inputStyle{
 width:250px;
 height:25px;
-border-radius:10px;
 border:0px;
 outline:None;
-cursor:pointer
+
 }
 .SearchBar{
     position: relative;    

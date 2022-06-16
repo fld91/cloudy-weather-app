@@ -1,43 +1,28 @@
 import React from 'react'
 import '../../styles/DailyContainer.css'
+import DailyRow from './DailyRow'
 
-const data=[{
-  day:"Monday",
-  preci:"54",
-}]
+
+function calculateDay(timestamp){
+  console.log(timestamp)
+  const date=new Date(timestamp*1000);  
+  const days=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]  
+  return days[date.getDay()]
+
+}
 
 function Daily(props) {
+  const dailyData=props.data.daily;
+  
   return (
-    <div className='dailyContainer'>
-        <table>
-          <thead>
-        <tr>
-            <th>Day</th>
-            <th>Precipitation</th>
-            <th>e</th>
-            <th>r</th>
-            <th>t</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>4</td>
-        </tr>
-        </tbody>   
-            
-        </table>
-        
+    <div className='dailyContainer'> 
+   { 
+      dailyData.map((dayWeather)=>{
+      const day=calculateDay(dayWeather.dt)
+      console.log(day)
+    return <DailyRow day={day} precipitation={dayWeather.dew_point} min={dayWeather.temp.min} max={dayWeather.temp.max}/>
+   })}     
+      
     </div>
   )
 }

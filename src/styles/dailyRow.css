@@ -1,0 +1,34 @@
+.daily-row{
+display:flex;
+justify-content: baseline;
+font-family: 'Roboto';
+font-weight: 300;
+font-size: 18px;
+
+
+}
+
+
+.daily-row > *{
+    width:50px;
+    margin:10px 50px 10px 20px;
+    height: 20px;
+    
+}
+.div-row :last-child{
+    margin-right: 0;
+}
+
+
+.daily-row img{
+    width: 30px;
+    height: 30px;
+}
+
+.bar{
+   margin-top: 15px;
+    width:80px;
+    height:10px;
+    background-color: #ff6738;
+    border-radius: 4px;
+}
