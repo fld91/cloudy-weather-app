@@ -3,7 +3,7 @@ import profile from '../assets/profile.jpeg'
 import '../styles/detailCityCard.css'
 import imag from '../assets/icons8-search-ios-glyph-16.png'
 import ChanceOfRain from '../charts/ChanceOfRain'
-function DetailCityCard(props) {
+function DetailCityCard(props,a) {
   const temp=28
   const d=new Date();
   const date=String( "Sat," + d.getDate() + "Aug")

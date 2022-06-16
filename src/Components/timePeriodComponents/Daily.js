@@ -17,10 +17,10 @@ function Daily(props) {
   return (
     <div className='dailyContainer'> 
    { 
-      dailyData.map((dayWeather)=>{
+      dailyData.map((dayWeather,index)=>{
       const day=calculateDay(dayWeather.dt)
-      console.log(day)
-    return <DailyRow day={day} precipitation={dayWeather.dew_point} min={dayWeather.temp.min} max={dayWeather.temp.max}/>
+      console.log(dayWeather)
+    return <DailyRow key={index} day={day} precipitation={dayWeather.dew_point} min={dayWeather.temp.min} max={dayWeather.temp.max} imgg={dayWeather.weather[0].icon}/>
    })}     
       
     </div>

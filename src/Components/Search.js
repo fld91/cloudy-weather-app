@@ -18,8 +18,7 @@ function Search(props) {
 
   const [city, setcity] = useState(initialState)
   const handleOnSearch = (results) => {
-    // onSearch will have as the first callback parameter
-    // the string searched and for the second the results.
+    
     setcity(results)
        
   }
