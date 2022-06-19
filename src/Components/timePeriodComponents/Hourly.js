@@ -1,8 +1,15 @@
 import React from 'react'
+import {userContext} from '../../App'
+import { useContext } from 'react'
 
-function Hourly() {
+function Hourly(props) {
+  const first = useContext(userContext)
   return (
-    <div>Hourly</div>
+    <div>{console.log(first.lat)}
+
+
+
+    </div>
   )
 }
 

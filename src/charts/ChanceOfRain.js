@@ -1,5 +1,5 @@
 import React from 'react'
-import Chart from 'chart.js/auto';
+import Chart, { registerables } from 'chart.js/auto';
 import { Bar } from 'react-chartjs-2';
 
 
@@ -18,8 +18,8 @@ function ChanceOfRain() {
                 label: 'Hourly Data',
                 fill: false,
                 lineTension: 0.5,
-                backgroundColor: 'rgba(75,192,192,1)',
-                borderColor: 'rgba(0,0,0,1)',
+                backgroundColor: 'RGB(48, 46, 98)',
+                borderColor: 'RGB(29, 31, 75)',
                 borderWidth: 1,
                 barThickness: 10,
                 borderRadius: 8,
@@ -38,6 +38,7 @@ function ChanceOfRain() {
                         display: false
                     },
                     ticks: {
+                        color:'rgba(255,250,250,1)',
                         beginAtZero: true,
                         callback: (val, index, values) => {
                             return yLabels[val]

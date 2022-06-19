@@ -4,9 +4,9 @@ import DailyRow from './DailyRow'
 
 
 function calculateDay(timestamp){
-  console.log(timestamp)
+  
   const date=new Date(timestamp*1000);  
-  const days=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]  
+  const days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]  
   return days[date.getDay()]
 
 }
@@ -19,7 +19,7 @@ function Daily(props) {
    { 
       dailyData.map((dayWeather,index)=>{
       const day=calculateDay(dayWeather.dt)
-      console.log(dayWeather)
+     // console.log(dayWeather)
     return <DailyRow key={index} day={day} precipitation={dayWeather.dew_point} min={dayWeather.temp.min} max={dayWeather.temp.max} imgg={dayWeather.weather[0].icon}/>
    })}     
       

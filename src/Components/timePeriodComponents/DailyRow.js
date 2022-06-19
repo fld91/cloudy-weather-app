@@ -22,6 +22,9 @@ function DailyRow(props) {
  useEffect(() => {
   switch(props?.imgg)
   {
+    case "1d":
+      setimg(d1)
+      break;
     case "2d":
       setimg(d2)
       break;
@@ -51,7 +54,7 @@ function DailyRow(props) {
  }, [props])
  
 
-   console.log(props.imgg)
+   
   return (
     <div className='daily-row'>
          <div className='week-day'>{props.day}</div>

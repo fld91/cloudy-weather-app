@@ -3,13 +3,35 @@ import profile from '../assets/profile.jpeg'
 import '../styles/detailCityCard.css'
 import imag from '../assets/icons8-search-ios-glyph-16.png'
 import ChanceOfRain from '../charts/ChanceOfRain'
-function DetailCityCard(props,a) {
-  const temp=28
-  const d=new Date();
-  const date=String( "Sat," + d.getDate() + "Aug")
-  const feelslike=32;
-  const sunsetTime=20.15
-  const cityName="Berlin, Germany" 
+import {useState,useEffect} from 'react'
+function ConvertToDayDate(a)
+{
+
+}
+function Cal_OrderOfDay(day){
+  //calculate order of day like today or tommorow  or day
+  
+
+
+}
+
+function DetailCityCard(wData) {
+  const [Temp, setTemp] = useState(28.6)
+  const [feels_like,setFeelLike]=useState(25)
+  const date=String( "Sat,"  + "Aug")
+  
+  const [sunsetTime, setSunset] = useState(8)
+  const [cityName, setcityName] = useState("New Delhi")
+  useEffect(() => {
+   
+  setTemp(Math.floor(wData.data.current.temp))
+  setFeelLike(Math.floor(wData.data.current.feels_like))
+  setcityName(wData.cityName)
+  const time=new Date(wData.data.current.sunset*1000)
+  const hm=time.getHours() + "." +time.getMinutes()
+  setSunset(hm)
+  },)
+  
   return (
     <div >
         <div className='topbar'>
@@ -28,16 +50,16 @@ function DetailCityCard(props,a) {
           </div>
           <div className='temp'>
             <div className='temperature'>
-              {temp}
+              {Temp}
             </div>
            <span className='degcel'>&#8451;</span>
           </div>
           <span className='cityname' >{cityName}</span>
-          <span className='btm'>Feels like {feelslike}  &#183; Sunset {sunsetTime} </span>
+          <span className='btm'>Feels like {feels_like}  &#183; Sunset {sunsetTime} </span>
         </div>
         <div className='bottom'>
 <p className='btm-title-text'>Chance of rain</p>
-<ChanceOfRain/>
+<ChanceOfRain />
 
         </div>
     </div>

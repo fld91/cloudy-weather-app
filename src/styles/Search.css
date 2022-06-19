@@ -6,12 +6,10 @@ outline:None;
 
 }
 .SearchBar{
-    position: relative;    
-    padding:10px;
+    position: relative;   
     background-color: white;
     width:300px;
-    border-radius: 10px;
-    
+   
 }
 #searchIcon{
     position:relative;

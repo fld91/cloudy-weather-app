@@ -2,12 +2,12 @@ import './App.css';
 import CityWeatherCard from './Components/CityWeatherCard';
 import DetailCityCard from './Components/detailCityCard';
 import FavoriteContainer from './Components/FavoriteContainer';
-import {useState} from 'react'
+import React, {useState,useContext} from 'react'
 import Search from './Components/Search';
 import TitleLogo from './Components/TitleLogo';
+
 //this is the main container of project
-
-
+export const userContext=React.createContext();
 function App() { 
   const initialState={
     "lat": 19.0144,
@@ -1812,24 +1812,28 @@ function App() {
     ]
 }
   const [weatherData, setweatherData] = useState(initialState)
-  return (
+  const [cityName,setcityName]=useState("Mumbai")
+  
+   return (<userContext.Provider value={weatherData}>
       <div className="App"> 
       <div className='left'>
-        {console.log(weatherData)}       {/*  all 5 main components are here */}
-      <Search setData={setweatherData}/>      
+    {/*  all 5 main components are here */}
+      <Search setData={setweatherData} setCity={setcityName}/>      
       <TitleLogo/>
-      <FavoriteContainer/>
-      <CityWeatherCard data={weatherData} /> 
-      
+      <FavoriteContainer city={cityName}/>
+      <CityWeatherCard data={weatherData} />   
       
       </div>   
       <div 
       className='right'>
-        <DetailCityCard data={weatherData}/>
+        
+        <DetailCityCard data={weatherData} cityName={cityName}/>
+        {console.log(cityName)} 
         </div>    
      
       
       </div>
+      </userContext.Provider>
    
   );
 }

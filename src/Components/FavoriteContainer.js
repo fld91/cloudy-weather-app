@@ -1,18 +1,32 @@
 import React from 'react'
 import Favorite from './Favorite'
 import '../styles/favoriteContainer.css'
+import {useEffect,useState} from 'react'
 
-
-const cities = ["Nagpur", "Indore", "chandigarh", "Mysore"]
-function FavoriteContainer() {
-  function handleFavorite(e){
-    console.log(e)
-    cities.push(e);
-
+function FavoriteContainer(props) {
+  const [cities, setCities] = useState([])
+  function check(city){
+  for (let index = 0; index < cities.length; index++) {
+    const element = cities[index];
+    if(city==element)
+    return true
+    
+  }
+  return false
+  }
+  function handleFavorite(e){ 
+    if(check(props.city))
+    {
+      alert("Already in favorites")
+    }
+    else{
+     setCities([...cities,props.city])  
+    }
+    
   }
   return (
     <div className='favoriteContainer'>
-      {
+      { 
         cities.map((city,index) => {         
           return <Favorite cityName={city} key={city} />
         })
@@ -26,4 +40,4 @@ function FavoriteContainer() {
         )
 }
 
-        export default FavoriteContainer
+export default FavoriteContainer

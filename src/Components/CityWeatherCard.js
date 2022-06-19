@@ -21,13 +21,13 @@ const tabs = [
         id: 2,
         tabTitle: 'Hourly',
         title: 'Title 2',
-        content: <Hourly data={props.data}/>
+        content: <Hourly/>
     },
     {
         id: 3,
         tabTitle: 'Minutely',
         title: 'Title 3',
-        content: <Minutely data={props.data}/>
+        content: <Minutely/>
     },
     
 ];
